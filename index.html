@@ -243,7 +243,7 @@ const allowSpecialPrice = hasMainProduct || specialCount >= 2;
     if (product.id === 16) optionNote = '（脂質體維他命C (1200毫克)＋Biotrace 素食綜合維他命D3+K2+鎂＋Biotrace 有機鋅 ）';
     if (product.id === 17) optionNote = '（益纖菌 金裝＋Lactovital 乳鐵蛋白膠囊＋Biotrace 有機鋅 ）';
     if (product.id === 18) optionNote = '（益纖菌 金裝＋脂質體維他命C (1200毫克)＋  Biotrace 素食綜合維他命D3+K2+鎂 ）';
-    if (product.id === 14) optionNote = '（成人及兒童牙膏每款兩支 ）';
+    if (product.id === 37) optionNote = '（成人及兒童牙膏每款兩支 ）';
     if (product.id === 45) optionNote = '（芒果味/藍莓味/草莓味/香蕉味--請註明 ）';
     if (product.id === 46) optionNote = '（無花果味/芒果味/藍莓味--請註明 ）';
     if (product.id === 49) optionNote = '（湯包 任選一包 加購價: $20--每單一次）';
@@ -514,16 +514,16 @@ function handleOrder(isWhatsApp) {
       if (id === 9) {
         const useDiscountQty = allowSpecialPrice ? Math.min(1, qty) : 0;
         const normalQty = qty - useDiscountQty;
-        if (useDiscountQty > 0) orderDetails += `• ${label} x 1包（加購價38 HKD/包）\n`;
-        if (normalQty > 0) orderDetails += `• ${label} x ${normalQty}盒（68 HKD/包）\n`;
+        if (useDiscountQty > 0) orderDetails += `• ${label} x 1份（加購價38 HKD/包）\n`;
+        if (normalQty > 0) orderDetails += `• ${label} x ${normalQty}份（68 HKD/包）\n`;
         continue;
       }
 
       if (id === 49) {
         const useDiscountQty = allowSpecialPrice ? Math.min(1, qty) : 0;
         const normalQty = qty - useDiscountQty;
-        if (useDiscountQty > 0) orderDetails += `• ${label} x 1包（加購價20 HKD/包）\n`;
-        if (normalQty > 0) orderDetails += `• ${label} x ${normalQty}包（42 HKD/包）\n`;
+        if (useDiscountQty > 0) orderDetails += `• ${label} x 1份（加購價20 HKD/包）\n`;
+        if (normalQty > 0) orderDetails += `• ${label} x ${normalQty}份（42 HKD/包）\n`;
         continue;
       }
 

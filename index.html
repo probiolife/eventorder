@@ -514,8 +514,8 @@ function handleOrder(isWhatsApp) {
       if (id === 9) {
         const useDiscountQty = allowSpecialPrice ? Math.min(1, qty) : 0;
         const normalQty = qty - useDiscountQty;
-        if (useDiscountQty > 0) orderDetails += `• ${label} x 1盒（加購價38 HKD/盒）\n`;
-        if (normalQty > 0) orderDetails += `• ${label} x ${normalQty}盒（68 HKD/盒）\n`;
+        if (useDiscountQty > 0) orderDetails += `• ${label} x 1包（加購價38 HKD/包）\n`;
+        if (normalQty > 0) orderDetails += `• ${label} x ${normalQty}盒（68 HKD/包）\n`;
         continue;
       }
 
@@ -529,7 +529,7 @@ function handleOrder(isWhatsApp) {
 
       const unitPrice = priceInfo.sale;
       const subtotal = qty * unitPrice;
-      orderDetails += `• ${label} x ${qty}盒（${unitPrice} HKD/盒，共 ${subtotal} HKD）\n`;
+      orderDetails += `• ${label} x ${qty}份（${unitPrice} HKD/份，共 ${subtotal} HKD）\n`;
     }
   }
 
